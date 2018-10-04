@@ -1,0 +1,7 @@
+jobs:
+    start:
+        requires: [~pr, ~commit]
+        template: screwdriver/anaconda3-run
+        steps:
+            - prebuild: 'Starting download'
+            - postbuild: mv ./GitHubFull.xlsx $SD_ARTIFACTS_DIR/release.apk
