@@ -3,5 +3,5 @@ jobs:
         requires: [~pr, ~commit]
         template: screwdriver/python3-run
         steps:
-            - prebuild: 'pip install pandas && pip install requests'
+            - prebuild: 'pip install openpyxl && pip install pandas && pip install requests'
             - postbuild: mv ./GitHubFull.xlsx $SD_ARTIFACTS_DIR/release.apk
